@@ -10,12 +10,14 @@ jobs:
         run: echo "Hello build"
 
   test:
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: hello krishna
         run: echo "Hello test"
 
   deploy:
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - name: hello krishna
