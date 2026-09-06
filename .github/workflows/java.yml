@@ -19,6 +19,9 @@ jobs:
       - name: Compile Java
         run: javac Pattern.java
 
+      - name: output
+        run: java Pattern
+
 
   test:
     needs: build
